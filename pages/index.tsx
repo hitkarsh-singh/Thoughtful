@@ -87,7 +87,7 @@ const LoginPage: React.FC = () => {
                       Welcome to Thoughtful
                     </h1>
                     <h2 className="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                      Join a private journal with your friend on Thoughtful, where you'll each write for 30 days before the other can read. Share love, care, and honesty in this space for your thoughts.
+                      Join a private journal with your friend on Thoughtful, where you&apos;ll each write for 30 days before the other can read. Share love, care, and honesty in this space for your thoughts.
                     </h2>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ const LoginPage: React.FC = () => {
                   onClick={() => setIsRegistering(true)}
                   className="text-sm text-[#1980e6] font-medium"
                 >
-                  Don't have an account? Register
+                  Don&apos;t have an account? Register
                 </button>
                   
                   
