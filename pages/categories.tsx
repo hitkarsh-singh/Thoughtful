@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 interface Category {
@@ -99,7 +100,7 @@ const CategoriesPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {categories.map((category) => (
               <div key={category.title} className="relative bg-white rounded-xl shadow-lg overflow-hidden group">
-                <img src={category.imageUrl} alt={category.title} className="w-full h-48 object-cover" />
+                <Image src={category.imageUrl} alt={category.title} className="w-full h-48 object-cover" />
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6 transition-opacity group-hover:bg-opacity-60">
                   <h2 className="text-white text-xl font-semibold mb-2">{category.title}</h2>
                   <p className="text-white text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity">{category.description}</p>
