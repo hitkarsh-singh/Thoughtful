@@ -99,20 +99,27 @@ const CategoriesPage: React.FC = () => {
           <h1 className="text-3xl font-bold mb-6">Choose a Category</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {categories.map((category) => (
-              <div key={category.title} className="relative bg-white rounded-xl shadow-lg overflow-hidden group">
-                <Image src={category.imageUrl} alt={category.title} className="w-full h-48 object-cover" />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6 transition-opacity group-hover:bg-opacity-60">
-                  <h2 className="text-white text-xl font-semibold mb-2">{category.title}</h2>
-                  <p className="text-white text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity">{category.description}</p>
-                  <button
-                    // onClick={() => router.push(`/category/${category.title.toLowerCase()}`)}
-                    onClick={() => router.push(`/entriesandreveals`)}
-                    className="bg-white text-black px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors"
-                  >
-                    Select
-                  </button>
-                </div>
+              <div key={category.title} className="relative bg-white rounded-xl shadow-lg overflow-hidden group" style={{ height: '200px' }}>
+              <Image
+                src={category.imageUrl}
+                alt={category.title}
+                layout="fill"
+                objectFit="cover"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6 transition-opacity group-hover:bg-opacity-60">
+                <h2 className="text-white text-xl font-semibold mb-2">{category.title}</h2>
+                <p className="text-white text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                  {category.description}
+                </p>
+                <button
+                  onClick={() => router.push(`/entriesandreveals`)}
+                  className="bg-white text-black px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  Select
+                </button>
               </div>
+            </div>
             ))}
           </div>
         </main>

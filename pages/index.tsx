@@ -22,6 +22,8 @@ const LoginPage: React.FC = () => {
         });
         const data = await response.json();
         if (data.success) {
+          // Login successful, store the token or session ID
+          localStorage.setItem('token', data.token);
           router.push('/categories');
         } else {
           alert('Invalid email or password');
